@@ -1,0 +1,479 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1ED15B9619530D5400714BDC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ED15B9519530D5400714BDC /* Foundation.framework */; };
+		1ED15B9819530D5400714BDC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ED15B9719530D5400714BDC /* CoreGraphics.framework */; };
+		1ED15B9A19530D5400714BDC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ED15B9919530D5400714BDC /* UIKit.framework */; };
+		1ED15BA019530D5400714BDC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1ED15B9E19530D5400714BDC /* InfoPlist.strings */; };
+		1ED15BA219530D5400714BDC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED15BA119530D5400714BDC /* main.m */; };
+		1ED15BA619530D5400714BDC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED15BA519530D5400714BDC /* AppDelegate.m */; };
+		1ED15BA919530D5400714BDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ED15BA719530D5400714BDC /* Main.storyboard */; };
+		1ED15BAC19530D5400714BDC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED15BAB19530D5400714BDC /* ViewController.m */; };
+		1ED15BAE19530D5400714BDC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ED15BAD19530D5400714BDC /* Images.xcassets */; };
+		1ED15BB519530D5400714BDC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ED15BB419530D5400714BDC /* XCTest.framework */; };
+		1ED15BB619530D5400714BDC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ED15B9519530D5400714BDC /* Foundation.framework */; };
+		1ED15BB719530D5400714BDC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ED15B9919530D5400714BDC /* UIKit.framework */; };
+		1ED15BBF19530D5400714BDC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1ED15BBD19530D5400714BDC /* InfoPlist.strings */; };
+		1ED15BC119530D5400714BDC /* OtamaTuneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED15BC019530D5400714BDC /* OtamaTuneTests.m */; };
+		1ED15BCB19530D9100714BDC /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ED15BCA19530D9100714BDC /* Accelerate.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1ED15BB819530D5400714BDC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1ED15B8A19530D5400714BDC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1ED15B9119530D5400714BDC;
+			remoteInfo = OtamaTune;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1ED15B9219530D5400714BDC /* OtamaTune.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OtamaTune.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1ED15B9519530D5400714BDC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1ED15B9719530D5400714BDC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1ED15B9919530D5400714BDC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1ED15B9D19530D5400714BDC /* OtamaTune-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OtamaTune-Info.plist"; sourceTree = "<group>"; };
+		1ED15B9F19530D5400714BDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1ED15BA119530D5400714BDC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1ED15BA319530D5400714BDC /* OtamaTune-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OtamaTune-Prefix.pch"; sourceTree = "<group>"; };
+		1ED15BA419530D5400714BDC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1ED15BA519530D5400714BDC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1ED15BA819530D5400714BDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1ED15BAA19530D5400714BDC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1ED15BAB19530D5400714BDC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1ED15BAD19530D5400714BDC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1ED15BB319530D5400714BDC /* OtamaTuneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OtamaTuneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1ED15BB419530D5400714BDC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		1ED15BBC19530D5400714BDC /* OtamaTuneTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OtamaTuneTests-Info.plist"; sourceTree = "<group>"; };
+		1ED15BBE19530D5400714BDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1ED15BC019530D5400714BDC /* OtamaTuneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OtamaTuneTests.m; sourceTree = "<group>"; };
+		1ED15BCA19530D9100714BDC /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1ED15B8F19530D5400714BDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ED15BCB19530D9100714BDC /* Accelerate.framework in Frameworks */,
+				1ED15B9819530D5400714BDC /* CoreGraphics.framework in Frameworks */,
+				1ED15B9A19530D5400714BDC /* UIKit.framework in Frameworks */,
+				1ED15B9619530D5400714BDC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1ED15BB019530D5400714BDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ED15BB519530D5400714BDC /* XCTest.framework in Frameworks */,
+				1ED15BB719530D5400714BDC /* UIKit.framework in Frameworks */,
+				1ED15BB619530D5400714BDC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1ED15B8919530D5400714BDC = {
+			isa = PBXGroup;
+			children = (
+				1ED15B9B19530D5400714BDC /* OtamaTune */,
+				1ED15BBA19530D5400714BDC /* OtamaTuneTests */,
+				1ED15B9419530D5400714BDC /* Frameworks */,
+				1ED15B9319530D5400714BDC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1ED15B9319530D5400714BDC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1ED15B9219530D5400714BDC /* OtamaTune.app */,
+				1ED15BB319530D5400714BDC /* OtamaTuneTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1ED15B9419530D5400714BDC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1ED15BCA19530D9100714BDC /* Accelerate.framework */,
+				1ED15B9519530D5400714BDC /* Foundation.framework */,
+				1ED15B9719530D5400714BDC /* CoreGraphics.framework */,
+				1ED15B9919530D5400714BDC /* UIKit.framework */,
+				1ED15BB419530D5400714BDC /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1ED15B9B19530D5400714BDC /* OtamaTune */ = {
+			isa = PBXGroup;
+			children = (
+				1ED15BA419530D5400714BDC /* AppDelegate.h */,
+				1ED15BA519530D5400714BDC /* AppDelegate.m */,
+				1ED15BA719530D5400714BDC /* Main.storyboard */,
+				1ED15BAA19530D5400714BDC /* ViewController.h */,
+				1ED15BAB19530D5400714BDC /* ViewController.m */,
+				1ED15BAD19530D5400714BDC /* Images.xcassets */,
+				1ED15B9C19530D5400714BDC /* Supporting Files */,
+			);
+			path = OtamaTune;
+			sourceTree = "<group>";
+		};
+		1ED15B9C19530D5400714BDC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1ED15B9D19530D5400714BDC /* OtamaTune-Info.plist */,
+				1ED15B9E19530D5400714BDC /* InfoPlist.strings */,
+				1ED15BA119530D5400714BDC /* main.m */,
+				1ED15BA319530D5400714BDC /* OtamaTune-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1ED15BBA19530D5400714BDC /* OtamaTuneTests */ = {
+			isa = PBXGroup;
+			children = (
+				1ED15BC019530D5400714BDC /* OtamaTuneTests.m */,
+				1ED15BBB19530D5400714BDC /* Supporting Files */,
+			);
+			path = OtamaTuneTests;
+			sourceTree = "<group>";
+		};
+		1ED15BBB19530D5400714BDC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1ED15BBC19530D5400714BDC /* OtamaTuneTests-Info.plist */,
+				1ED15BBD19530D5400714BDC /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1ED15B9119530D5400714BDC /* OtamaTune */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1ED15BC419530D5400714BDC /* Build configuration list for PBXNativeTarget "OtamaTune" */;
+			buildPhases = (
+				1ED15B8E19530D5400714BDC /* Sources */,
+				1ED15B8F19530D5400714BDC /* Frameworks */,
+				1ED15B9019530D5400714BDC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OtamaTune;
+			productName = OtamaTune;
+			productReference = 1ED15B9219530D5400714BDC /* OtamaTune.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1ED15BB219530D5400714BDC /* OtamaTuneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1ED15BC719530D5400714BDC /* Build configuration list for PBXNativeTarget "OtamaTuneTests" */;
+			buildPhases = (
+				1ED15BAF19530D5400714BDC /* Sources */,
+				1ED15BB019530D5400714BDC /* Frameworks */,
+				1ED15BB119530D5400714BDC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1ED15BB919530D5400714BDC /* PBXTargetDependency */,
+			);
+			name = OtamaTuneTests;
+			productName = OtamaTuneTests;
+			productReference = 1ED15BB319530D5400714BDC /* OtamaTuneTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1ED15B8A19530D5400714BDC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Kouki;
+				TargetAttributes = {
+					1ED15BB219530D5400714BDC = {
+						TestTargetID = 1ED15B9119530D5400714BDC;
+					};
+				};
+			};
+			buildConfigurationList = 1ED15B8D19530D5400714BDC /* Build configuration list for PBXProject "OtamaTune" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1ED15B8919530D5400714BDC;
+			productRefGroup = 1ED15B9319530D5400714BDC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1ED15B9119530D5400714BDC /* OtamaTune */,
+				1ED15BB219530D5400714BDC /* OtamaTuneTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1ED15B9019530D5400714BDC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ED15BAE19530D5400714BDC /* Images.xcassets in Resources */,
+				1ED15BA019530D5400714BDC /* InfoPlist.strings in Resources */,
+				1ED15BA919530D5400714BDC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1ED15BB119530D5400714BDC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ED15BBF19530D5400714BDC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1ED15B8E19530D5400714BDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ED15BAC19530D5400714BDC /* ViewController.m in Sources */,
+				1ED15BA619530D5400714BDC /* AppDelegate.m in Sources */,
+				1ED15BA219530D5400714BDC /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1ED15BAF19530D5400714BDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ED15BC119530D5400714BDC /* OtamaTuneTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1ED15BB919530D5400714BDC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1ED15B9119530D5400714BDC /* OtamaTune */;
+			targetProxy = 1ED15BB819530D5400714BDC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1ED15B9E19530D5400714BDC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1ED15B9F19530D5400714BDC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1ED15BA719530D5400714BDC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1ED15BA819530D5400714BDC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1ED15BBD19530D5400714BDC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1ED15BBE19530D5400714BDC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1ED15BC219530D5400714BDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		1ED15BC319530D5400714BDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1ED15BC519530D5400714BDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OtamaTune/OtamaTune-Prefix.pch";
+				INFOPLIST_FILE = "OtamaTune/OtamaTune-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1ED15BC619530D5400714BDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OtamaTune/OtamaTune-Prefix.pch";
+				INFOPLIST_FILE = "OtamaTune/OtamaTune-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		1ED15BC819530D5400714BDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OtamaTune.app/OtamaTune";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OtamaTune/OtamaTune-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "OtamaTuneTests/OtamaTuneTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		1ED15BC919530D5400714BDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OtamaTune.app/OtamaTune";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OtamaTune/OtamaTune-Prefix.pch";
+				INFOPLIST_FILE = "OtamaTuneTests/OtamaTuneTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1ED15B8D19530D5400714BDC /* Build configuration list for PBXProject "OtamaTune" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1ED15BC219530D5400714BDC /* Debug */,
+				1ED15BC319530D5400714BDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1ED15BC419530D5400714BDC /* Build configuration list for PBXNativeTarget "OtamaTune" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1ED15BC519530D5400714BDC /* Debug */,
+				1ED15BC619530D5400714BDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1ED15BC719530D5400714BDC /* Build configuration list for PBXNativeTarget "OtamaTuneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1ED15BC819530D5400714BDC /* Debug */,
+				1ED15BC919530D5400714BDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1ED15B8A19530D5400714BDC /* Project object */;
+}
