@@ -12,7 +12,9 @@
 		1E65925E19B2248E00EA9953 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E65925C19B2248E00EA9953 /* Main.storyboard */; };
 		1E65926019B2248E00EA9953 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E65925F19B2248E00EA9953 /* Images.xcassets */; };
 		1E65926C19B2248E00EA9953 /* OtamaTuneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E65926B19B2248E00EA9953 /* OtamaTuneTests.swift */; };
-		1E65927619B224AC00EA9953 /* AudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E65927519B224AC00EA9953 /* AudioController.swift */; };
+		1E65927819B2251B00EA9953 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E65927719B2251B00EA9953 /* AudioToolbox.framework */; };
+		1E65927D19B226B600EA9953 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E65927C19B226B600EA9953 /* AVFoundation.framework */; };
+		1E65928219B2CBE100EA9953 /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E65928119B2CBE100EA9953 /* AudioController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +37,11 @@
 		1E65926519B2248E00EA9953 /* OtamaTuneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OtamaTuneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E65926A19B2248E00EA9953 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E65926B19B2248E00EA9953 /* OtamaTuneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtamaTuneTests.swift; sourceTree = "<group>"; };
-		1E65927519B224AC00EA9953 /* AudioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioController.swift; sourceTree = "<group>"; };
+		1E65927719B2251B00EA9953 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		1E65927919B2257E00EA9953 /* OtamaTune-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OtamaTune-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		1E65927C19B226B600EA9953 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		1E65928019B2CBE100EA9953 /* AudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioController.h; path = ../AudioController.h; sourceTree = "<group>"; };
+		1E65928119B2CBE100EA9953 /* AudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioController.m; path = ../AudioController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E65927D19B226B600EA9953 /* AVFoundation.framework in Frameworks */,
+				1E65927819B2251B00EA9953 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +67,8 @@
 		1E65924A19B2248E00EA9953 = {
 			isa = PBXGroup;
 			children = (
+				1E65927C19B226B600EA9953 /* AVFoundation.framework */,
+				1E65927719B2251B00EA9953 /* AudioToolbox.framework */,
 				1E65925519B2248E00EA9953 /* OtamaTune */,
 				1E65926819B2248E00EA9953 /* OtamaTuneTests */,
 				1E65925419B2248E00EA9953 /* Products */,
@@ -78,9 +88,11 @@
 			isa = PBXGroup;
 			children = (
 				1E65925819B2248E00EA9953 /* AppDelegate.swift */,
+				1E65928019B2CBE100EA9953 /* AudioController.h */,
+				1E65928119B2CBE100EA9953 /* AudioController.m */,
 				1E65925A19B2248E00EA9953 /* ViewController.swift */,
-				1E65927519B224AC00EA9953 /* AudioController.swift */,
 				1E65925C19B2248E00EA9953 /* Main.storyboard */,
+				1E65927919B2257E00EA9953 /* OtamaTune-Bridging-Header.h */,
 				1E65925F19B2248E00EA9953 /* Images.xcassets */,
 				1E65925619B2248E00EA9953 /* Supporting Files */,
 			);
@@ -212,7 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E65925B19B2248E00EA9953 /* ViewController.swift in Sources */,
-				1E65927619B224AC00EA9953 /* AudioController.swift in Sources */,
+				1E65928219B2CBE100EA9953 /* AudioController.m in Sources */,
 				1E65925919B2248E00EA9953 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,9 +343,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = OtamaTune/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OtamaTune-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -342,9 +357,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = OtamaTune/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OtamaTune-Bridging-Header.h";
 			};
 			name = Release;
 		};
