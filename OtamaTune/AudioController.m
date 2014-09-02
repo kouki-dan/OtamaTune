@@ -8,6 +8,7 @@
 
 #import "AudioController.h"
 #import <AVFoundation/AVFoundation.h>
+#import <Accelerate/Accelerate.h>
 
 @interface AudioController ()
 
@@ -43,7 +44,7 @@
 
     AudioQueueRef queue;
 
-    status = AudioQueueNewInput(&audioFormat, AudioInputCallback, (__bridge void *)self,
+    status = AudioQueueNewInput(&audioFormat, AudioInputCallback, (__bridge_retained void *)self,
                        CFRunLoopGetCurrent(),kCFRunLoopCommonModes,0,&queue);
     NSAssert(status == noErr, @"Failed to create new input queue.");
 
@@ -77,7 +78,6 @@
     return self;
 }
 
-
 static void AudioInputCallback(
                                void* inUserData,
                                AudioQueueRef inAQ,
@@ -86,13 +86,24 @@ static void AudioInputCallback(
                                UInt32 inNumberPacketDescriptions,
                                const AudioStreamPacketDescription *inPacketDescs)
 {
-    NSLog(@"%p", inBuffer->mAudioData);
-    
+    //NSLog(@"%p", inBuffer->mAudioData);
+    /*
     AudioBuffer buffer = {
         .mNumberChannels = 1,
         .mDataByteSize = inBuffer->mAudioDataByteSize,
         .mData = inBuffer->mAudioData
     };
+    */
+    
+    //NSLog(@"%p", inUserData);
+    
+    
+    AudioController *ac = (__bridge AudioController *)inUserData;
+    void *data = inBuffer->mAudioData;
+    int size = inBuffer->mAudioDataByteSize;
+    
+    //NSLog(@"%p",ac);
+    [ac.delegate receivedAudioSamples:data length:size];
     
     
     

@@ -6,4 +6,5 @@
 #import<AudioToolbox/AudioToolbox.h>
 #import <AVFoundation/AVFoundation.h> 
 
+#import "PitchDetector.h"
 #import "AudioController.h"

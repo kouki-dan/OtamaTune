@@ -8,7 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+
+@protocol AudioControllerDelegate
+@required
+- (void) receivedAudioSamples:(SInt16*) samples length:(int) len;
+@end
+
+
 @interface AudioController : NSObject
+
+@property (nonatomic, assign) id<AudioControllerDelegate> delegate;
 
 
 
