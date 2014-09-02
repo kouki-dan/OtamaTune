@@ -14,9 +14,9 @@
 		1E65926C19B2248E00EA9953 /* OtamaTuneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E65926B19B2248E00EA9953 /* OtamaTuneTests.swift */; };
 		1E65927819B2251B00EA9953 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E65927719B2251B00EA9953 /* AudioToolbox.framework */; };
 		1E65927D19B226B600EA9953 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E65927C19B226B600EA9953 /* AVFoundation.framework */; };
-		1E65928219B2CBE100EA9953 /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E65928119B2CBE100EA9953 /* AudioController.m */; };
 		1E65928419B32A6F00EA9953 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E65928319B32A6F00EA9953 /* Accelerate.framework */; };
-		1E65928719B349B800EA9953 /* PitchDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E65928619B349B800EA9953 /* PitchDetector.m */; };
+		1E6791F419B5DC5B00CC37A5 /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6791F119B5DC5B00CC37A5 /* AudioController.m */; };
+		1E6791F519B5DC5B00CC37A5 /* PitchDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6791F319B5DC5B00CC37A5 /* PitchDetector.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,11 +42,11 @@
 		1E65927719B2251B00EA9953 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		1E65927919B2257E00EA9953 /* OtamaTune-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OtamaTune-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		1E65927C19B226B600EA9953 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		1E65928019B2CBE100EA9953 /* AudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioController.h; path = ../AudioController.h; sourceTree = "<group>"; };
-		1E65928119B2CBE100EA9953 /* AudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioController.m; path = ../AudioController.m; sourceTree = "<group>"; };
 		1E65928319B32A6F00EA9953 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
-		1E65928519B349B800EA9953 /* PitchDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PitchDetector.h; sourceTree = "<group>"; };
-		1E65928619B349B800EA9953 /* PitchDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PitchDetector.m; sourceTree = "<group>"; };
+		1E6791F019B5DC5B00CC37A5 /* AudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioController.h; sourceTree = "<group>"; };
+		1E6791F119B5DC5B00CC37A5 /* AudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioController.m; sourceTree = "<group>"; };
+		1E6791F219B5DC5B00CC37A5 /* PitchDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PitchDetector.h; sourceTree = "<group>"; };
+		1E6791F319B5DC5B00CC37A5 /* PitchDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PitchDetector.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,10 +95,10 @@
 			isa = PBXGroup;
 			children = (
 				1E65925819B2248E00EA9953 /* AppDelegate.swift */,
-				1E65928019B2CBE100EA9953 /* AudioController.h */,
-				1E65928119B2CBE100EA9953 /* AudioController.m */,
-				1E65928519B349B800EA9953 /* PitchDetector.h */,
-				1E65928619B349B800EA9953 /* PitchDetector.m */,
+				1E6791F019B5DC5B00CC37A5 /* AudioController.h */,
+				1E6791F119B5DC5B00CC37A5 /* AudioController.m */,
+				1E6791F219B5DC5B00CC37A5 /* PitchDetector.h */,
+				1E6791F319B5DC5B00CC37A5 /* PitchDetector.m */,
 				1E65925A19B2248E00EA9953 /* ViewController.swift */,
 				1E65925C19B2248E00EA9953 /* Main.storyboard */,
 				1E65927919B2257E00EA9953 /* OtamaTune-Bridging-Header.h */,
@@ -232,9 +232,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E65928719B349B800EA9953 /* PitchDetector.m in Sources */,
+				1E6791F519B5DC5B00CC37A5 /* PitchDetector.m in Sources */,
+				1E6791F419B5DC5B00CC37A5 /* AudioController.m in Sources */,
 				1E65925B19B2248E00EA9953 /* ViewController.swift in Sources */,
-				1E65928219B2CBE100EA9953 /* AudioController.m in Sources */,
 				1E65925919B2248E00EA9953 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,6 +428,7 @@
 				1E65927119B2248E00EA9953 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1E65927219B2248E00EA9953 /* Build configuration list for PBXNativeTarget "OtamaTuneTests" */ = {
 			isa = XCConfigurationList;
@@ -436,6 +437,7 @@
 				1E65927419B2248E00EA9953 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

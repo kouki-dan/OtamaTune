@@ -104,7 +104,7 @@ void checkStatus(OSStatus status) {
     // Set input callback
     AURenderCallbackStruct callbackStruct;
     callbackStruct.inputProc = recordingCallback;
-    callbackStruct.inputProcRefCon = (__bridge void*)self;
+    callbackStruct.inputProcRefCon = (__bridge_retained void*)self;
     
     status = AudioUnitSetProperty(rioUnit, 
                                   kAudioOutputUnitProperty_SetInputCallback, 
@@ -119,6 +119,7 @@ void checkStatus(OSStatus status) {
     flag = 0;
     status = AudioUnitSetProperty(rioUnit, kAudioUnitProperty_ShouldAllocateBuffer, kAudioUnitScope_Global, kInputBus, &flag, sizeof(flag));
     
+
     
     // Initialise
     UInt32 category = kAudioSessionCategory_PlayAndRecord;

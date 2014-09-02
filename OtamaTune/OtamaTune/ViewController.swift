@@ -17,7 +17,7 @@ class ViewController: UIViewController, AudioControllerDelegate, PitchDetectorDe
         
         let l = AudioController()
         l.delegate = self
-        
+        l.startAudio()
         
         autoCorrelator = PitchDetector(sampleRate: 44100.0,  andDelegate: self)
         
