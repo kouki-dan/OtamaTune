@@ -43,8 +43,6 @@ void checkStatus(OSStatus status) {
 - (id)init
 {
     OSStatus status;
-    status = AudioSessionInitialize(NULL, NULL, NULL, (__bridge void*) self);
-    checkStatus(status);
     
     // Describe audio component
     AudioComponentDescription desc;
@@ -119,9 +117,12 @@ void checkStatus(OSStatus status) {
     flag = 0;
     status = AudioUnitSetProperty(rioUnit, kAudioUnitProperty_ShouldAllocateBuffer, kAudioUnitScope_Global, kInputBus, &flag, sizeof(flag));
     
-
     
     // Initialise
+    status = AudioSessionInitialize(NULL, NULL, NULL, (__bridge void*) self);
+    checkStatus(status);
+
+    
     UInt32 category = kAudioSessionCategory_PlayAndRecord;
     status = AudioSessionSetProperty(kAudioSessionProperty_AudioCategory, sizeof(category), &category);
     checkStatus(status);

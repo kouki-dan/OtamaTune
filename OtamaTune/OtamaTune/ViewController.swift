@@ -8,9 +8,11 @@
 
 import UIKit
 
+
 class ViewController: UIViewController, AudioControllerDelegate, PitchDetectorDelegate {
-    
     var autoCorrelator:PitchDetector!
+    let table = [ "A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#" ]
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -37,6 +39,12 @@ class ViewController: UIViewController, AudioControllerDelegate, PitchDetectorDe
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func freqToTone(freq: Float) -> String{
+        let tone = round(log2f(freq / 440.0) * 12.0) % 12
+
+        return table[Int(tone)]
     }
 
 
