@@ -70,6 +70,21 @@
     }
 }
 
+-(BOOL) samplesIsSoundless:(SInt16 *) samples numFrames:(int)n{
+    float max;
+//    float min;
+    max = -1000000;
+//    min = 10000000;
+    for(int i = 0; i<n; i++){
+        max = MAX(max, samples[i]);
+//        min = MIN(min, samples[i]);
+        if(max > 500){
+            return NO;
+        }
+    }
+    
+    return YES;
+}
 
 #pragma mark Perform Auto Correlation
 
@@ -84,7 +99,8 @@
     float sum;
     bool goingUp = false;
     float normalize = 0;
-        
+    
+
     for(int i = 0; i<n; i++) {
         sum = 0;
         for(int j = 0; j<n; j++) {
@@ -126,7 +142,12 @@
     }
     
     freq =self.sampleRate/interp(result[returnIndex-1], result[returnIndex], result[returnIndex+1], returnIndex);
-    if(freq >= 27.5 && freq <= 4500.0) {
+    
+    if([self samplesIsSoundless:samples numFrames:n]){
+        freq = 0.0;
+    }
+    
+    if((freq >= 27.5 && freq <= 4500.0 ) || freq == 0.0) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [delegate updatedPitch:freq];
         }); 
