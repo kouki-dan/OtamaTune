@@ -29,7 +29,7 @@
     self.sampleRate = rate;
     self.delegate = initDelegate;
     
-    bufferLength = self.sampleRate/self.lowBoundFrequency;    
+    bufferLength = self.sampleRate/self.lowBoundFrequency*2;
     
     
     hann = (float*) malloc(sizeof(float)*bufferLength);
@@ -105,9 +105,12 @@
         sum = 0;
         for(int j = 0; j<n; j++) {
             sum += (samples[j]*samples[j+i])*hann[j];
+
         }
-        if(i ==0 ) normalize = sum;
+
+        if(i == 0 ) normalize = sum;
         result[i] = sum/normalize;
+
     }
     
     
@@ -141,7 +144,7 @@
         }
     }
     
-    freq =self.sampleRate/interp(result[returnIndex-1], result[returnIndex], result[returnIndex+1], returnIndex);
+    freq = self.sampleRate/interp(result[returnIndex-1], result[returnIndex], result[returnIndex+1], returnIndex);
     
     if([self samplesIsSoundless:samples numFrames:n]){
         freq = 0.0;
