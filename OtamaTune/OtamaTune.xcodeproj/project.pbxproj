@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E380ECC19E561E5007EA3D5 /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E380ECB19E561E5007EA3D5 /* AudioController.m */; };
+		1E380ECF19E56261007EA3D5 /* PitchDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E380ECE19E56261007EA3D5 /* PitchDetector.m */; };
 		1E65925919B2248E00EA9953 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E65925819B2248E00EA9953 /* AppDelegate.swift */; };
 		1E65925B19B2248E00EA9953 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E65925A19B2248E00EA9953 /* ViewController.swift */; };
 		1E65925E19B2248E00EA9953 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E65925C19B2248E00EA9953 /* Main.storyboard */; };
@@ -15,8 +17,6 @@
 		1E65927819B2251B00EA9953 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E65927719B2251B00EA9953 /* AudioToolbox.framework */; };
 		1E65927D19B226B600EA9953 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E65927C19B226B600EA9953 /* AVFoundation.framework */; };
 		1E65928419B32A6F00EA9953 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E65928319B32A6F00EA9953 /* Accelerate.framework */; };
-		1E6791F419B5DC5B00CC37A5 /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6791F119B5DC5B00CC37A5 /* AudioController.m */; };
-		1E6791F519B5DC5B00CC37A5 /* PitchDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6791F319B5DC5B00CC37A5 /* PitchDetector.m */; };
 		1E7C4A4C19E50D1800E7C625 /* TuningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C4A4B19E50D1800E7C625 /* TuningViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +31,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E380ECA19E561E5007EA3D5 /* AudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioController.h; sourceTree = "<group>"; };
+		1E380ECB19E561E5007EA3D5 /* AudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioController.m; sourceTree = "<group>"; };
+		1E380ECD19E56261007EA3D5 /* PitchDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PitchDetector.h; sourceTree = "<group>"; };
+		1E380ECE19E56261007EA3D5 /* PitchDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PitchDetector.m; sourceTree = "<group>"; };
 		1E65925319B2248E00EA9953 /* OtamaTune.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OtamaTune.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E65925719B2248E00EA9953 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E65925819B2248E00EA9953 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,10 +48,6 @@
 		1E65927919B2257E00EA9953 /* OtamaTune-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OtamaTune-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		1E65927C19B226B600EA9953 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		1E65928319B32A6F00EA9953 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
-		1E6791F019B5DC5B00CC37A5 /* AudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioController.h; sourceTree = "<group>"; };
-		1E6791F119B5DC5B00CC37A5 /* AudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioController.m; sourceTree = "<group>"; };
-		1E6791F219B5DC5B00CC37A5 /* PitchDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PitchDetector.h; sourceTree = "<group>"; };
-		1E6791F319B5DC5B00CC37A5 /* PitchDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PitchDetector.m; sourceTree = "<group>"; };
 		1E7C4A4B19E50D1800E7C625 /* TuningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TuningViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,10 +97,10 @@
 			isa = PBXGroup;
 			children = (
 				1E65925819B2248E00EA9953 /* AppDelegate.swift */,
-				1E6791F019B5DC5B00CC37A5 /* AudioController.h */,
-				1E6791F119B5DC5B00CC37A5 /* AudioController.m */,
-				1E6791F219B5DC5B00CC37A5 /* PitchDetector.h */,
-				1E6791F319B5DC5B00CC37A5 /* PitchDetector.m */,
+				1E380ECA19E561E5007EA3D5 /* AudioController.h */,
+				1E380ECB19E561E5007EA3D5 /* AudioController.m */,
+				1E380ECD19E56261007EA3D5 /* PitchDetector.h */,
+				1E380ECE19E56261007EA3D5 /* PitchDetector.m */,
 				1E65925A19B2248E00EA9953 /* ViewController.swift */,
 				1E7C4A4B19E50D1800E7C625 /* TuningViewController.swift */,
 				1E65925C19B2248E00EA9953 /* Main.storyboard */,
@@ -235,11 +235,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E6791F519B5DC5B00CC37A5 /* PitchDetector.m in Sources */,
-				1E6791F419B5DC5B00CC37A5 /* AudioController.m in Sources */,
+				1E380ECC19E561E5007EA3D5 /* AudioController.m in Sources */,
 				1E65925B19B2248E00EA9953 /* ViewController.swift in Sources */,
 				1E65925919B2248E00EA9953 /* AppDelegate.swift in Sources */,
 				1E7C4A4C19E50D1800E7C625 /* TuningViewController.swift in Sources */,
+				1E380ECF19E56261007EA3D5 /* PitchDetector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
