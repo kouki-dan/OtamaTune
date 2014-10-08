@@ -15,8 +15,9 @@ class TuningViewController: UIViewController, AudioControllerDelegate, PitchDete
     
     @IBOutlet weak var toneLabel: UILabel!
     @IBOutlet weak var barView: UIView!
+
+    var silenceCount = 0
     
-    var cent=0.0;
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,19 +39,23 @@ class TuningViewController: UIViewController, AudioControllerDelegate, PitchDete
         let tone = freqToTone(frequency)
         let pitch = Double(Int((cent - round(cent)) * 100))
         
+        if pitch == 0{
+            silenceCount += 1
+            if silenceCount >= 5{
+                toneLabel.text = ""
+                barView.hidden = true
+            }
+        }
+        
+        silenceCount = 0
         
         toneLabel.text = "\(tone)"
         
-        
-        self.cent = self.cent + 1
-        let angle = self.cent * M_PI / 180.0;
-        println(barView.bounds.height)
-        barView.transform = CGAffineTransformMakeRotation(CGFloat(angle));
+        let diff = Double((cent - round(cent)) * 100)
+        let angle = diff * M_PI / 200.0
+        barView.hidden = false
+        barView.transform = CGAffineTransformMakeRotation(CGFloat(angle))
 
-
-        if pitch == 0{
-            toneLabel.text = ""
-        }
 
         /*
         pitchLabel.text = "\(pitch) cent"
@@ -79,11 +84,8 @@ class TuningViewController: UIViewController, AudioControllerDelegate, PitchDete
     
     func freqToTone(freq: Float) -> String{
         let tone = (round(log2f(freq / 440.0) * 12.0)+120) % 12
-        return "A"
         return table[Int(tone)]
     }
-
-    
 
     /*
     // MARK: - Navigation

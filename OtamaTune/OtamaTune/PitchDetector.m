@@ -29,8 +29,8 @@
     bufferLength = self.sampleRate/self.lowBoundFrequency*2;
     
     
-    hann = (float*) malloc(sizeof(float)*bufferLength);
-    vDSP_hann_window(hann, bufferLength, vDSP_HANN_NORM);
+    hann = (float*) malloc(sizeof(float)*1000);
+    vDSP_hann_window(hann, 1000, vDSP_HANN_NORM);
     
     sampleBuffer = (SInt16*) malloc(512);
     samplesInSampleBuffer = 0;
@@ -57,8 +57,6 @@
     samplesInSampleBuffer = newLength;
     
     if(samplesInSampleBuffer>(self.sampleRate/self.lowBoundFrequency)) {
-        NSLog(@"%d", samplesInSampleBuffer);
-        
         if(!self.running) {
             [self performSelectorInBackground:@selector(performWithNumFrames:) withObject:[NSNumber numberWithInt:newLength]];
             self.running = YES;
@@ -77,7 +75,7 @@
     for(int i = 0; i<n; i++){
         max = MAX(max, samples[i]);
         //        min = MIN(min, samples[i]);
-        if(max > 500){
+        if(max > 100){
             return NO;
         }
     }
@@ -103,8 +101,13 @@
     for(int i = 0; i<n; i++) {
         sum = 0;
         for(int j = 0; j<n; j++) {
-            sum += (samples[j]*samples[j+i])*hann[j];
+            int hann_offset = (int)((float)j/n * 1000);
+            if(hann_offset >= 990){
+                // Is it working?
+                // I'll check it after I get home.
+            }
             
+            sum += (samples[j]*samples[j+i])*hann[hann_offset];
         }
         
         if(i == 0 ) normalize = sum;
