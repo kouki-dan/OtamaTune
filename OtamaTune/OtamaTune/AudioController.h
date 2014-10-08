@@ -6,6 +6,8 @@
 //  Copyright (c) 2014年 Kouki. All rights reserved.
 //
 
+// GithubのPitchDetectionを参考にしました。(あとでURL付ける）
+
 #import <AVFoundation/AVFoundation.h>
 #import <AudioToolbox/AudioToolbox.h>
 

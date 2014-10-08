@@ -57,6 +57,8 @@
     samplesInSampleBuffer = newLength;
     
     if(samplesInSampleBuffer>(self.sampleRate/self.lowBoundFrequency)) {
+        NSLog(@"%d", samplesInSampleBuffer);
+        
         if(!self.running) {
             [self performSelectorInBackground:@selector(performWithNumFrames:) withObject:[NSNumber numberWithInt:newLength]];
             self.running = YES;
