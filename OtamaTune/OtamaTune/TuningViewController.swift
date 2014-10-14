@@ -45,8 +45,10 @@ class TuningViewController: UIViewController, AudioControllerDelegate, PitchDete
                 toneLabel.text = ""
                 barView.hidden = true
             }
+            else{
+                return
+            }
         }
-        
         silenceCount = 0
         
         toneLabel.text = "\(tone)"
@@ -80,7 +82,6 @@ class TuningViewController: UIViewController, AudioControllerDelegate, PitchDete
     func freqToOctave(freq: Float) -> Float{
         return round((freqToCent(freq) + 3) / 12) + 4
     }
-    
     
     func freqToTone(freq: Float) -> String{
         let tone = (round(log2f(freq / 440.0) * 12.0)+120) % 12

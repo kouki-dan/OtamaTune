@@ -49,7 +49,7 @@
         <!--Tone-->
         <scene sceneID="RWp-FN-pwA">
             <objects>
-                <viewController id="zON-o6-73Z" sceneMemberID="viewController">
+                <viewController id="zON-o6-73Z" customClass="ToneViewController" customModule="OtamaTune" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mu9-wr-a7g"/>
                         <viewControllerLayoutGuide type="bottom" id="l8m-FY-296"/>
