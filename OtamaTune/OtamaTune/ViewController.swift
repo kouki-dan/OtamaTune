@@ -33,7 +33,7 @@ class ViewController: UIViewController, AudioControllerDelegate, PitchDetectorDe
         let cent = freqToCent(frequency)
         let octave = freqToOctave(frequency)
         let tone = freqToTone(frequency)
-        let pitch = Double(Int((cent - round(cent)) * 100))
+        let pitch = Double(Int((cent - round(cent))))
         toneLabel.text = "\(octave)\(tone)"
         pitchLabel.text = "\(pitch) cent"
         freqLabel.text = "\(frequency) f"

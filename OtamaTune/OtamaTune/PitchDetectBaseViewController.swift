@@ -11,6 +11,20 @@ import UIKit
 class PitchDetectBaseViewController: UIViewController, AudioControllerDelegate, PitchDetectorDelegate {
     var autoCorrelator:PitchDetector!
     let table = [ "A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#" ]
+    let freqTable = [
+        "A":0,
+        "A#":1,
+        "B":2,
+        "C":3,
+        "C#":4,
+        "D":5,
+        "D#":6,
+        "E":7,
+        "F":8,
+        "F#":9,
+        "G":10,
+        "G#":11,
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,11 +48,11 @@ class PitchDetectBaseViewController: UIViewController, AudioControllerDelegate, 
     }
 
     func freqToCent(freq: Float) -> Float{
-        return log2f(freq / 440) * 12
+        return log2f(freq / 440) * 12 * 100
     }
     
     func freqToOctave(freq: Float) -> Float{
-        return round((freqToCent(freq) + 3) / 12) + 4
+        return round((freqToCent(freq) / 100 + 3) / 12) + 4
     }
     
     func freqToTone(freq: Float) -> String{

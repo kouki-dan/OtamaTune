@@ -25,13 +25,19 @@ class TuningViewController: PitchDetectBaseViewController{
     }
 
     
+    func randomTone() -> String{
+        let pos = random() % self.table.count
+        return self.table[pos];
+    }
+    
+    
     override func updatedPitch(frequency: Float) {
         let cent = freqToCent(frequency)
         let octave = freqToOctave(frequency)
         let tone = freqToTone(frequency)
-        let pitch = Double(Int((cent - round(cent)) * 100))
+        let pitch = Double(Int((cent - round(cent))))
         
-        if pitch == 0{
+        if frequency == 0{
             silenceCount += 1
             if silenceCount >= 5{
                 toneLabel.text = ""
